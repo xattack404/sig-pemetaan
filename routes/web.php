@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LahanController;
@@ -26,9 +27,11 @@ use App\Http\Controllers\ItemTransaksiPetaniController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
+
 
 Route::middleware(['auth'])
     ->get('/dashboard', function () {
