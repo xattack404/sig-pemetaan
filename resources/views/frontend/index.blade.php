@@ -77,7 +77,7 @@
         <div class="container">
             <style>
                 #map {
-                    height: 450px;
+                    height: 460px;
                 }
 
             </style>
